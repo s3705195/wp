@@ -1,0 +1,327 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+body
+{
+	margin: 0px;
+  padding: 0px;
+	font-family: Quicksand;
+	font-size: 11pt;
+	font-weight: 300;
+	color: #6c6c6c
+}
+
+.product-container {
+  display: flex;
+  max-width: 1000px;
+  margin: 0;
+  padding: 20px;
+}
+
+.container
+{
+	margin: 0px auto;
+	width: 1200px;
+}
+
+/* Header */
+	
+#header
+{
+	position: relative;
+	height: 100px;
+}
+
+/* Logo */
+
+#logo img
+{
+    /* height: 15%; */
+    width: 15%;
+    position:fixed; 
+    top:1.6em; 
+    left:9%;
+}
+
+/* Menu */
+
+#menu
+{
+	position: absolute;
+	right: -9em;
+	top: 1.6em;
+}
+
+#menu ul
+{
+	display: inline-block;
+}
+
+#menu li
+{
+	display: block;
+	float: left;
+	text-align: center;
+}
+
+#menu li a, #menu li span
+{
+	display: inline-block;
+	margin-left: 1px;
+	padding: 1em 1.5em 1em 1.5em;
+    letter-spacing: 0.10em;
+    font-family: Quicksand;
+	text-decoration: none;
+	font-size: 1em;
+	text-transform: uppercase;
+	outline: 0;
+	color: grey;
+}
+
+#menu li:hover a, #menu li.active a, #menu li.active span
+{
+    /* background: #dc5c5a;
+    border-radius: 25px; */
+    color: #cf4af8;
+}
+
+#menu .current_page_item a
+{
+	background:grey;
+	border-radius: 30px;
+	color: #FFF;
+}
+
+/* Image Column and Image */
+
+.image-column img {
+    width: 400%;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.image-column img.active {
+    opacity: 1;
+}
+
+.image-column {
+    position: relative;
+    width: 60%;
+}
+
+/* Information Column */
+
+.info-column {
+    position: absolute;
+    width: 40%;
+    left: 775px;
+}
+
+/* T-Shirt Information */
+
+.tshirt-description {
+    border-bottom: 1px solid #ac39ac;
+    margin-bottom: 20px;
+}
+
+.tshirt-description span {
+  color: #4d79ff;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.tshirt-description h1 {
+  color: #262626;
+  font-size: 50px;
+  letter-spacing: -3px;
+  font-weight: 700;
+}
+
+.tshirt-description p {
+    color: black;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+.tshirt-description ul {
+    color: black;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+/* T-Shirt Color and Color Buttons*/
+
+.tshirt-color {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ac39ac;
+    padding: 2px;
+}
+
+.tshirt-color span {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.choose-color div {
+  display: inline-block;
+}
+
+.choose-color input {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.choose-color input #grey {
+  background-color: gray;
+}
+
+/* T-Shirt Price */
+
+.tshirt-price {
+  display: flex;
+  align-items: center;
+}
+
+.tshirt-price span {
+  font-size: 26px;
+  font-weight: 700;
+  color: #ac39ac;
+  margin-right: 20px;
+}
+
+/* Buy Now Button*/
+
+.buy-button {
+  display:inline-block;
+padding:0.6em 2.2em;
+margin:0 0.1em 0.1em 0;
+border:0.16em solid rgba(255,255,255,0);
+border-radius:2em;
+box-sizing: border-box;
+text-decoration:none;
+font-family:'Nunito',sans-serif;
+font-weight:300;
+color:#FFFFFF;
+text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+text-align:center;
+font-size: 18px;
+transition: all 0.2s;
+background-color:#f14ebd;
+}
+.buy-button:hover {
+  background-color: #ec36b3;        
+}
+
+/* Size Dropdown Menu */
+
+.size-options{
+  position: relative;
+  display: inline-block;
+}
+
+.size-options span {
+  font-size: 18px;
+  font-weight: 700;
+  color: black;
+  margin-right: 20px; 
+}
+
+.tshirt-size {
+    display: inline-block;
+    min-width: 160px;
+    padding: 8px 6px;
+    z-index: 1;
+    
+}
+
+/* Quantity Button to add/subtract an item */
+
+form{
+    margin: 0;
+    width: 300px;
+}
+
+.quantity-button {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid grey;
+    background: #eee;
+    height: 20px;
+    width: 40px;
+    padding: 11px 0;
+}
+
+input#number {
+    text-align: center;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    height: 40px;
+    width: 40px;
+    border: none;
+}
+
+form #subtract {
+  margin-right: -4px;
+  border-radius: 6px 0 0 6px;
+}
+
+form #add {
+  margin-left: -4px;
+  border-radius: 0 6px 6px 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+}
+
+.value-button:hover {
+  cursor: pointer;
+}
+
+#copyright
+{
+	overflow: hidden;
+	padding: 2em 0em 2em 0em;
+	line-height: 150%;
+}
+
+#copyright p
+{
+	letter-spacing: 0.20em;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 0.80em;
+	color:#2b2b2b;
+	
+}
+
+#copyright a
+{
+	text-decoration: none;
+	color:#2b2b2b;
+}
+#toggleWireframeCSS {
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	padding: 6px 10px;
+	opacity: 0.5;
+	font-family: 'Nunito';
+  }
+#toggleWireframeCSS:hover {
+	opacity: 1;
+}
